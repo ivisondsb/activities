@@ -29,4 +29,16 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, SecondActivity::class.java))
         }
     }
+
+    override fun onStop() {
+        super.onStop()
+
+        Log.i("LOG", "onResume()" + System.currentTimeMillis())
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+
+        Log.i("LOG", "onResume()" + System.currentTimeMillis())
+    }
 }
